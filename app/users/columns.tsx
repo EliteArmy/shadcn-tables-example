@@ -1,11 +1,11 @@
 "use client";
 
-import clsx from "clsx";
 import { ColumnDef } from "@tanstack/react-table";
+import clsx from "clsx";
 
-import { customersStatus, customerRole } from "@/app/users/definitions";
 import { DataTableColumnHeader } from "@/app/users/data-table-column-header";
 import { DataTableRowActions } from "@/app/users/data-table-row-actions";
+import { usersRole, usersStatus } from "@/app/users/definitions";
 
 export const columns: ColumnDef<User>[] = [
   {
@@ -31,7 +31,7 @@ export const columns: ColumnDef<User>[] = [
     accessorKey: "role",
     header: ({ column }) => <DataTableColumnHeader column={column} title={"Role"} />,
     cell: ({ row }) => {
-      const role = customerRole.find((role) => role.value === row.getValue("role"));
+      const role = usersRole.find((role) => role.value === row.getValue("role"));
 
       if (!role) {
         // If a value is not what you expect or does not exist you can return null.
@@ -53,7 +53,7 @@ export const columns: ColumnDef<User>[] = [
     accessorKey: "status",
     header: ({ column }) => <DataTableColumnHeader column={column} title={"Status"} />,
     cell: ({ row }) => {
-      const status = customersStatus.find((status) => status.value === row.getValue("status"));
+      const status = usersStatus.find((status) => status.value === row.getValue("status"));
 
       if (!status) {
         return null;

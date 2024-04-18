@@ -1,6 +1,6 @@
 import { CheckCircledIcon, CrossCircledIcon } from "@radix-ui/react-icons";
 
-export const customersStatus = [
+export const usersStatus = [
   {
     value: "active",
     label: "Active",
@@ -13,7 +13,7 @@ export const customersStatus = [
   },
 ];
 
-export const customerRole = [
+export const usersRole = [
   {
     value: "client",
     label: "Client",

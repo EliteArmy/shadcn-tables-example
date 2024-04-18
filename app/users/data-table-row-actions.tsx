@@ -1,11 +1,10 @@
 "use client";
 
-import { Pencil, Trash2, Eye } from "lucide-react";
-
+// import { UserSchema } from "@/app/users/userSchema";
+import Link from "next/link";
 import { DotsHorizontalIcon } from "@radix-ui/react-icons";
 import { Row } from "@tanstack/react-table";
-// import { UserSchema } from "@/app/customers/userSchema";
-import Link from "next/link";
+import { Eye, Pencil, Trash2 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -34,7 +33,7 @@ export function DataTableRowActions<TData>({ row }: DataTableRowActionsProps<TDa
       <DropdownMenuContent align="end">
         <DropdownMenuItem>
           <Button variant={"ghost"} size={"sm"} className={"justify-start w-full"} asChild>
-            <Link href={`#`}>
+            <Link href={"#"}>
               <Eye className="w-4 h-4 text-blue-500" />
               {<span className="ml-2">{"View"}</span>}
             </Link>
@@ -43,7 +42,7 @@ export function DataTableRowActions<TData>({ row }: DataTableRowActionsProps<TDa
 
         <DropdownMenuItem>
           <Button variant={"ghost"} size={"sm"} className={"justify-start w-full"} asChild>
-            <Link href={`#`}>
+            <Link href={"#"}>
               <Pencil className="h-4 w-4 text-green-500" />
               {<span className="ml-2">{"Update"}</span>}
             </Link>
